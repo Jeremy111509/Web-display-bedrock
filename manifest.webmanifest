@@ -1,0 +1,9 @@
+{
+  "name": "WebDisplays Browser",
+  "short_name": "WebDisplays",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#0b111a",
+  "theme_color": "#101722",
+  "icons": []
+}

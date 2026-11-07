@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#101722">
+<title>WebDisplays Browser</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="brand"><span class="dot"></span><strong>WebDisplays</strong><small>BEDROCK BROWSER</small></div>
+  <button id="newTab" aria-label="Nueva pestaña">＋</button>
+</header>
+<nav class="toolbar">
+  <button id="back" title="Atrás">‹</button><button id="forward" title="Adelante">›</button><button id="reload" title="Recargar">↻</button>
+  <form id="addressForm"><input id="address" type="text" autocomplete="url" autocapitalize="off" spellcheck="false" placeholder="Buscar o escribir una dirección"><button type="submit">Ir</button></form>
+</nav>
+<main>
+  <section id="home" class="home">
+    <div class="hero"><div class="orb">W</div><h1>Tu navegador.</h1><p>Una aplicación web complementaria para WebDisplays Bedrock.</p></div>
+    <div class="quick">
+      <button data-url="https://www.wikipedia.org">Wikipedia</button>
+      <button data-url="https://www.mozilla.org">Mozilla</button>
+      <button data-url="https://www.example.com">Example</button>
+    </div>
+    <p class="notice">Nota: iOS utiliza WebKit para esta aplicación web. Algunas páginas impiden mostrarse dentro de un marco integrado; en ese caso usa «Abrir fuera».</p>
+  </section>
+  <section id="viewer" hidden>
+    <div class="framebar"><span id="currentUrl">Sin página</span><button id="openExternal">Abrir fuera ↗</button></div>
+    <iframe id="page" title="Página web" referrerpolicy="no-referrer"></iframe>
+    <p id="frameNote" class="notice">Si el sitio bloquea la visualización integrada, la página no se podrá mostrar aquí.</p>
+  </section>
+</main>
+<footer><span id="status">Listo</span><button id="bookmark">☆ Favorito</button><button id="historyBtn">Historial</button></footer>
+<dialog id="historyDialog"><h2>Historial reciente</h2><div id="historyList"></div><button id="closeHistory">Cerrar</button></dialog>
+<script src="app.js"></script>
+</body>
+</html>
